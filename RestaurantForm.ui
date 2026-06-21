@@ -1,0 +1,3403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RestaurantForm</class>
+ <widget class="QWidget" name="RestaurantForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>806</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#RestaurantForm{
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #EAF7E6, stop:1 #A1DBA1);
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <widget class="QLabel" name="Titel">
+     <property name="font">
+      <font>
+       <family>Times New Roman</family>
+       <pointsize>-1</pointsize>
+       <italic>true</italic>
+       <fontweight>ExtraBold</fontweight>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 65px;
+</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Restaurant Management&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="TabWidget">
+     <property name="font">
+      <font>
+       <family>Times New Roman</family>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTabWidget::pane {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    background-color: rgba(255,255,255,180);
+    padding: 5px;
+}
+
+QTabBar::tab {
+    padding: 10px;
+    border-bottom: 1px solid #a0d0a0;
+    color: #1a3d1a;
+    font-size: 14px;
+    background-color: rgba(255,255,255,180);
+    
+    /* ADDED: This creates a subtle green separator line on the right side of each tab */
+    border-right: 1px solid #a0d0a0; 
+}
+
+/* ADDED: Removes the separator line from the last tab so it looks professional */
+QTabBar::tab:last {
+    border-right: none;
+}
+
+QTabBar::tab:selected {
+    background-color: #2d6a2d;
+    color: white;
+    border-radius: 5px;
+    /* ADDED: Keeps the separator invisible on the right side when selected so the button looks clean */
+    border-right: none; 
+}
+
+QTabBar::tab:hover {
+    background-color: #c8e6c8;
+    border-radius: 5px;
+}</string>
+     </property>
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <widget class="QWidget" name="menuWin">
+      <attribute name="title">
+       <string>Tab 1</string>
+      </attribute>
+      <widget class="QGroupBox" name="Breakfast">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>90</y>
+         <width>261</width>
+         <height>341</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>-1</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox {
+    /* Bold dark green border with rounded corners */
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    
+    /* Pushes the interior content down so it doesn't overlap the title */
+    margin-top: 14px;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    /* Header text formatting */
+    font-weight: bold;
+    font-size: 13px;
+    color: #2d6a2d;
+    
+    /* Clean, soft off-white/cream background to pop against the dark workspace */
+    background-color: #f7faf6;
+}
+
+/* Position and style the text title anchor on the top line */
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 12px;
+    padding-left: 6px;
+    padding-right: 6px;
+    
+    /* Matches the parent container's solid background color to cut through the border line cleanly */
+    background-color: #f7faf6; 
+}</string>
+       </property>
+       <property name="title">
+        <string>Breakfast</string>
+       </property>
+       <widget class="QLabel" name="Titel_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>20</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Open Time</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>60</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Close Time</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_6">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>100</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Appetizer</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_7">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>140</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Main Plate</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_8">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>180</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Dessert</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_9">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>220</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Price</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_10">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>260</y>
+          <width>121</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Meal Served</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="BreakfastOpenTime">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>40</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #ededed; color: #004d00; padding: 5px; border: 1px solid #b3d1b3; 
+    border-radius: 15px;; font-size: 20px;</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="BreakfastCloseTime">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>80</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #ededed; color: #004d00; padding: 5px; border: 1px solid #b3d1b3; 
+    border-radius: 15px;; font-size: 20px;</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="BreakfastAppetizer">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>120</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #ededed; color: #004d00; padding: 5px; border: 1px solid #b3d1b3; 
+    border-radius: 15px;; font-size: 20px;</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="BreakfastMainPlate">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>160</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #ededed; color: #004d00; padding: 5px; border: 1px solid #b3d1b3; 
+    border-radius: 15px;; font-size: 20px;</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="BreakfastDessert">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>200</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #ededed; color: #004d00; padding: 5px; border: 1px solid #b3d1b3; 
+    border-radius: 15px;; font-size: 20px;</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="BreakfastPrice">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>240</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #ededed; color: #004d00; padding: 5px; border: 1px solid #b3d1b3; 
+    border-radius: 15px;; font-size: 20px;</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="BreakfastMealServed">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>280</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #ededed; color: #004d00; padding: 5px; border: 1px solid #b3d1b3; 
+    border-radius: 15px;; font-size: 20px;</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="Breakfast_2">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>90</y>
+         <width>261</width>
+         <height>341</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>-1</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox {
+    /* Bold dark green border with rounded corners */
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    
+    /* Pushes the interior content down so it doesn't overlap the title */
+    margin-top: 14px;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    /* Header text formatting */
+    font-weight: bold;
+    font-size: 13px;
+    color: #2d6a2d;
+    
+    /* Clean, soft off-white/cream background to pop against the dark workspace */
+    background-color: #f7faf6;
+}
+
+/* Position and style the text title anchor on the top line */
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 12px;
+    padding-left: 6px;
+    padding-right: 6px;
+    
+    /* Matches the parent container's solid background color to cut through the border line cleanly */
+    background-color: #f7faf6; 
+}</string>
+       </property>
+       <property name="title">
+        <string>Lunch</string>
+       </property>
+       <widget class="QLabel" name="Lunch">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>20</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Open Time</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_12">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>60</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Close Time</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_13">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>100</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Appetizer</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_14">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>140</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Main Plate</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_15">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>180</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Dessert</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_16">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>220</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Price</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_17">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>260</y>
+          <width>121</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Meal Served</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="LunchOpenTime">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>40</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #ededed; color: #004d00; padding: 5px; border: 1px solid #b3d1b3; 
+    border-radius: 15px;; font-size: 20px;</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="LunchCloseTime">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>80</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #ededed; color: #004d00; padding: 5px; border: 1px solid #b3d1b3; 
+    border-radius: 15px;; font-size: 20px;</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="LunchAppetizer">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>120</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #ededed; color: #004d00; padding: 5px; border: 1px solid #b3d1b3; 
+    border-radius: 15px;; font-size: 20px;</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="LunchMainPlate">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>160</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #ededed; color: #004d00; padding: 5px; border: 1px solid #b3d1b3; 
+    border-radius: 15px;; font-size: 20px;</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="LunchDessert">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>200</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #ededed; color: #004d00; padding: 5px; border: 1px solid #b3d1b3; 
+    border-radius: 15px;; font-size: 20px;</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="LunchPrice">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>240</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #ededed; color: #004d00; padding: 5px; border: 1px solid #b3d1b3; 
+    border-radius: 15px;; font-size: 20px;</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="LunchMealServed">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>280</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #ededed; color: #004d00; padding: 5px; border: 1px solid #b3d1b3; 
+    border-radius: 15px;; font-size: 20px;</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="Dinner">
+       <property name="geometry">
+        <rect>
+         <x>520</x>
+         <y>90</y>
+         <width>261</width>
+         <height>341</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>-1</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox {
+    /* Bold dark green border with rounded corners */
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    
+    /* Pushes the interior content down so it doesn't overlap the title */
+    margin-top: 14px;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    /* Header text formatting */
+    font-weight: bold;
+    font-size: 13px;
+    color: #2d6a2d;
+    
+    /* Clean, soft off-white/cream background to pop against the dark workspace */
+    background-color: #f7faf6;
+}
+
+/* Position and style the text title anchor on the top line */
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 12px;
+    padding-left: 6px;
+    padding-right: 6px;
+    
+    /* Matches the parent container's solid background color to cut through the border line cleanly */
+    background-color: #f7faf6; 
+}</string>
+       </property>
+       <property name="title">
+        <string>Dinner</string>
+       </property>
+       <widget class="QLabel" name="Titel_18">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>20</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Open Time</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_19">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>60</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Close Time</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_20">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>100</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Appetizer</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_21">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>140</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Main Plate</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_22">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>180</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Dessert</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_23">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>220</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Price</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_24">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>260</y>
+          <width>121</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Meal Served</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="DinnerOpenTime">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>40</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #ededed; color: #004d00; padding: 5px; border: 1px solid #b3d1b3; 
+    border-radius: 15px;; font-size: 20px;</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="DinnerCloseTime">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>80</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #ededed; color: #004d00; padding: 5px; border: 1px solid #b3d1b3; 
+    border-radius: 15px;; font-size: 20px;</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="DinnerAppetizer">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>120</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #ededed; color: #004d00; padding: 5px; border: 1px solid #b3d1b3; 
+    border-radius: 15px;; font-size: 20px;</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="DinnerMainPlate">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>160</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #ededed; color: #004d00; padding: 5px; border: 1px solid #b3d1b3; 
+    border-radius: 15px;; font-size: 20px;</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="DinnerDessert">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>200</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #ededed; color: #004d00; padding: 5px; border: 1px solid #b3d1b3; 
+    border-radius: 15px;; font-size: 20px;</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="DinnerPrice">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>240</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #ededed; color: #004d00; padding: 5px; border: 1px solid #b3d1b3; 
+    border-radius: 15px;; font-size: 20px;</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="DinnerMealServed">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>280</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #ededed; color: #004d00; padding: 5px; border: 1px solid #b3d1b3; 
+    border-radius: 15px;; font-size: 20px;</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>0</y>
+         <width>451</width>
+         <height>85</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="Titel_25">
+          <property name="font">
+           <font>
+            <family>Times New Roman</family>
+            <pointsize>-1</pointsize>
+            <italic>true</italic>
+            <underline>true</underline>
+            <fontweight>ExtraBold</fontweight>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 30px;
+</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Select Day&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="dayList">
+          <property name="font">
+           <font>
+            <family>Times New Roman</family>
+            <pointsize>-1</pointsize>
+            <italic>true</italic>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">/* Style the main closed dropdown box */
+QComboBox {
+    border: 1px solid #2d6a2d;
+    border-radius: 4px;
+    padding: 4px 10px;
+    min-width: 6em;
+    color: #1a3d1a;
+    background-color: rgba(255, 255, 255, 210);
+    font-size: 20px;
+}
+
+/* Style the arrow button section box on the right side */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px; /* Widened slightly for click breathing room */
+    border-left-width: 1px;
+    border-left-color: #a0d0a0;
+    border-left-style: solid; 
+    border-top-right-radius: 4px; 
+    border-bottom-right-radius: 4px;
+}
+
+/* FIX: This explicitly draws a sharp down-arrow triangle inside the dropdown area */
+QComboBox::down-arrow {
+    image: none; /* Clear native windows images */
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #2d6a2d; /* Draws a sharp green triangle down arrow */
+    width: 0;
+    height: 0;
+    position: relative;
+    right: 2px; /* Centers it nicely inside the 25px area */
+}
+
+/* Style the popup list box that drops down when clicked */
+QComboBox QAbstractItemView {
+    border: 1px solid #2d6a2d;
+    background-color: #ffffff;
+    selection-background-color: #2d6a2d;
+    selection-color: white;
+    color: #1a3d1a;
+}</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>Sunday</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Monday</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Tuesday</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Wednesday</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Thirsday</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Friday</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Saturday</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QPushButton" name="btnReturn_8">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>0</y>
+         <width>81</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>-1</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #ededed; color: #004d00; padding: 5px;  border-image: none; border: none; border-radius: 15px; font-size:25px;</string>
+       </property>
+       <property name="text">
+        <string>return</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="takeWIn">
+      <attribute name="title">
+       <string>Tab 2</string>
+      </attribute>
+      <widget class="QLabel" name="Titel_11">
+       <property name="geometry">
+        <rect>
+         <x>-10</x>
+         <y>0</y>
+         <width>781</width>
+         <height>82</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>-1</pointsize>
+         <italic>true</italic>
+         <fontweight>ExtraBold</fontweight>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 65px;
+</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Enter The Student Id&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="editStudentId">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>80</y>
+         <width>731</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>-1</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+     font-size: 30px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+       </property>
+       <property name="placeholderText">
+        <string>Enter the student Id...</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Titel_26">
+       <property name="geometry">
+        <rect>
+         <x>-10</x>
+         <y>140</y>
+         <width>781</width>
+         <height>82</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>-1</pointsize>
+         <italic>true</italic>
+         <fontweight>ExtraBold</fontweight>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 65px;
+</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Choose The Meal&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="theMealToTake">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>220</y>
+         <width>731</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>-1</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* Style the main closed dropdown box */
+QComboBox {
+    border: 1px solid #2d6a2d;
+    border-radius: 4px;
+    padding: 4px 10px;
+    min-width: 6em;
+    color: #004d00;
+    background-color: rgba(255, 255, 255, 210);
+    font-size: 30px;
+}
+
+/* Style the arrow button section box on the right side */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px; /* Widened slightly for click breathing room */
+    border-left-width: 1px;
+    border-left-color: #a0d0a0;
+    border-left-style: solid; 
+    border-top-right-radius: 4px; 
+    border-bottom-right-radius: 4px;
+}
+
+/* FIX: This explicitly draws a sharp down-arrow triangle inside the dropdown area */
+QComboBox::down-arrow {
+    image: none; /* Clear native windows images */
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #2d6a2d; /* Draws a sharp green triangle down arrow */
+    width: 0;
+    height: 0;
+    position: relative;
+    right: 2px; /* Centers it nicely inside the 25px area */
+}
+
+/* Style the popup list box that drops down when clicked */
+QComboBox QAbstractItemView {
+    border: 1px solid #2d6a2d;
+    background-color: #ffffff;
+    selection-background-color: #2d6a2d;
+    selection-color: white;
+    color: #1a3d1a;
+}</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Breakfast</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Lunch</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Dinner</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QPushButton" name="btnTakeTheMeal">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>290</y>
+         <width>271</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>-1</pointsize>
+         <italic>true</italic>
+         <fontweight>ExtraBold</fontweight>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #004d00; color: white; padding: 5px;  border-image: none; border: none; border-radius: 25px; font-size:30px;</string>
+       </property>
+       <property name="text">
+        <string>Take The Meal</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Titel_27">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>370</y>
+         <width>341</width>
+         <height>82</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>-1</pointsize>
+         <italic>true</italic>
+         <fontweight>ExtraBold</fontweight>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 40px;
+</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The Meal Number:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="theMealNumber">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>380</y>
+         <width>371</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>-1</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #ededed; color: #004d00; padding: 5px; border: 1px solid #b3d1b3; 
+    border-radius: 15px;; font-size: 30px;</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnReturn_7">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>0</y>
+         <width>81</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>-1</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #ededed; color: #004d00; padding: 5px;  border-image: none; border: none; border-radius: 15px; font-size:25px;</string>
+       </property>
+       <property name="text">
+        <string>return</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="rechargeWin">
+      <attribute name="title">
+       <string>Page</string>
+      </attribute>
+      <widget class="QLabel" name="Titel_28">
+       <property name="geometry">
+        <rect>
+         <x>-20</x>
+         <y>0</y>
+         <width>781</width>
+         <height>82</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>-1</pointsize>
+         <italic>true</italic>
+         <fontweight>ExtraBold</fontweight>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 65px;
+</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Enter The Student Id&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="editStudentId_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>80</y>
+         <width>731</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>-1</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+     font-size: 30px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+       </property>
+       <property name="placeholderText">
+        <string>Enter the student Id...</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Titel_29">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>140</y>
+         <width>781</width>
+         <height>82</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>-1</pointsize>
+         <italic>true</italic>
+         <fontweight>ExtraBold</fontweight>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 65px;
+</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Enter The Amount(DA)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="editTheAmount">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>220</y>
+         <width>731</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QSpinBox {
+    background-color: rgba(255,255,255,210);
+    color: #1b5e20;
+    border: 2px solid #2d6a2d;
+    border-radius: 10px;
+    padding: 4px 24px 4px 8px;
+    font-size: 30px;
+    font-weight: bold;
+    selection-background-color: #2d6a2d;
+    selection-color: white;
+}
+
+QSpinBox:hover {
+    border: 2px solid #388e3c;
+    background-color: rgba(255,255,255,230);
+}
+
+QSpinBox:focus {
+    border: 2px solid #1b5e20;
+}
+QSpinBox::up-button {
+    subcontrol-origin: border;
+    subcontrol-position: top right;
+    width: 22px;
+
+    background-color: #2d6a2d;
+    border-top-right-radius: 8px;
+    border-left: 1px solid #1b5e20;
+    border-bottom: 1px solid #1b5e20;
+}
+
+QSpinBox::down-button {
+    subcontrol-origin: border;
+    subcontrol-position: bottom right;
+    width: 22px;
+
+    background-color: #2d6a2d;
+    border-bottom-right-radius: 8px;
+    border-left: 1px solid #1b5e20;
+}
+
+QSpinBox::up-button:hover,
+QSpinBox::down-button:hover {
+    background-color: #388e3c;
+}
+
+QSpinBox::up-button:pressed,
+QSpinBox::down-button:pressed {
+    background-color: #1b5e20;
+}</string>
+       </property>
+       <property name="maximum">
+        <number>100000</number>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnRecharge">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>290</y>
+         <width>271</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>-1</pointsize>
+         <italic>true</italic>
+         <fontweight>ExtraBold</fontweight>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #004d00; color: white; padding: 5px;  border-image: none; border: none; border-radius: 25px; font-size:30px;</string>
+       </property>
+       <property name="text">
+        <string>Recharge</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Titel_30">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>370</y>
+         <width>341</width>
+         <height>82</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>-1</pointsize>
+         <italic>true</italic>
+         <fontweight>ExtraBold</fontweight>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 40px;
+</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The New Balance:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="theNewBalance">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>380</y>
+         <width>371</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>-1</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #ededed; color: #004d00; padding: 5px; border: 1px solid #b3d1b3; 
+    border-radius: 15px;; font-size: 30px;</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnReturn_6">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>0</y>
+         <width>81</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>-1</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #ededed; color: #004d00; padding: 5px;  border-image: none; border: none; border-radius: 15px; font-size:25px;</string>
+       </property>
+       <property name="text">
+        <string>return</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="modifyWin">
+      <attribute name="title">
+       <string>Page</string>
+      </attribute>
+      <widget class="QWidget" name="verticalLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>0</y>
+         <width>451</width>
+         <height>85</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QLabel" name="Titel_31">
+          <property name="font">
+           <font>
+            <family>Times New Roman</family>
+            <pointsize>-1</pointsize>
+            <italic>true</italic>
+            <underline>true</underline>
+            <fontweight>ExtraBold</fontweight>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 30px;
+</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Select Day&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="dayList_2">
+          <property name="font">
+           <font>
+            <family>Times New Roman</family>
+            <pointsize>-1</pointsize>
+            <italic>true</italic>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">/* Style the main closed dropdown box */
+QComboBox {
+    border: 1px solid #2d6a2d;
+    border-radius: 4px;
+    padding: 4px 10px;
+    min-width: 6em;
+    color: #1a3d1a;
+    background-color: rgba(255, 255, 255, 210);
+    font-size: 20px;
+}
+
+/* Style the arrow button section box on the right side */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px; /* Widened slightly for click breathing room */
+    border-left-width: 1px;
+    border-left-color: #a0d0a0;
+    border-left-style: solid; 
+    border-top-right-radius: 4px; 
+    border-bottom-right-radius: 4px;
+}
+
+/* FIX: This explicitly draws a sharp down-arrow triangle inside the dropdown area */
+QComboBox::down-arrow {
+    image: none; /* Clear native windows images */
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #2d6a2d; /* Draws a sharp green triangle down arrow */
+    width: 0;
+    height: 0;
+    position: relative;
+    right: 2px; /* Centers it nicely inside the 25px area */
+}
+
+/* Style the popup list box that drops down when clicked */
+QComboBox QAbstractItemView {
+    border: 1px solid #2d6a2d;
+    background-color: #ffffff;
+    selection-background-color: #2d6a2d;
+    selection-color: white;
+    color: #1a3d1a;
+}</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>Sunday</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Monday</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Tuesday</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Wednesday</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Thirsday</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Friday</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Saturday</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QGroupBox" name="Breakfast_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>90</y>
+         <width>261</width>
+         <height>341</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>-1</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox {
+    /* Bold dark green border with rounded corners */
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    
+    /* Pushes the interior content down so it doesn't overlap the title */
+    margin-top: 14px;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    /* Header text formatting */
+    font-weight: bold;
+    font-size: 13px;
+    color: #2d6a2d;
+    
+    /* Clean, soft off-white/cream background to pop against the dark workspace */
+    background-color: #f7faf6;
+}
+
+/* Position and style the text title anchor on the top line */
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 12px;
+    padding-left: 6px;
+    padding-right: 6px;
+    
+    /* Matches the parent container's solid background color to cut through the border line cleanly */
+    background-color: #f7faf6; 
+}</string>
+       </property>
+       <property name="title">
+        <string>Breakfast</string>
+       </property>
+       <widget class="QLabel" name="Titel_32">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>20</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Open Time</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_33">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>60</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Close Time</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_34">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>100</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Appetizer</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_35">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>140</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Main Plate</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_36">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>180</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Dessert</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_37">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>220</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Price</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_38">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>260</y>
+          <width>121</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Meal Served</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editBreakfastOpenTime">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>40</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Normal</enum>
+        </property>
+        <property name="placeholderText">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editBreakfastCloseTime">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>80</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Normal</enum>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editBreakfastAppetizer">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>120</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Normal</enum>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editBreakfastMainPlate">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>160</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Normal</enum>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editBreakfastDessert">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>200</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Normal</enum>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editBreakfastPrice">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>240</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Normal</enum>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editBreakfastMealServed">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>280</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Normal</enum>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="Breakfast_4">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>90</y>
+         <width>251</width>
+         <height>341</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>-1</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox {
+    /* Bold dark green border with rounded corners */
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    
+    /* Pushes the interior content down so it doesn't overlap the title */
+    margin-top: 14px;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    /* Header text formatting */
+    font-weight: bold;
+    font-size: 13px;
+    color: #2d6a2d;
+    
+    /* Clean, soft off-white/cream background to pop against the dark workspace */
+    background-color: #f7faf6;
+}
+
+/* Position and style the text title anchor on the top line */
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 12px;
+    padding-left: 6px;
+    padding-right: 6px;
+    
+    /* Matches the parent container's solid background color to cut through the border line cleanly */
+    background-color: #f7faf6; 
+}</string>
+       </property>
+       <property name="title">
+        <string>Breakfast</string>
+       </property>
+       <widget class="QLabel" name="Titel_39">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>20</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Open Time</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_40">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>60</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Close Time</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_41">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>100</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Appetizer</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_42">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>140</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Main Plate</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_43">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>180</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Dessert</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_44">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>220</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Price</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_45">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>260</y>
+          <width>121</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Meal Served</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editLunchOpenTime">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>40</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Normal</enum>
+        </property>
+        <property name="placeholderText">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editLunchCloseTime">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>80</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Normal</enum>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editLunchAppetizer">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>120</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Normal</enum>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editLunchMainPlate">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>160</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Normal</enum>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editLunchDessert">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>200</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Normal</enum>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editLunchPrice">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>240</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Normal</enum>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editLunchMealServed">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>280</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Normal</enum>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="Breakfast_5">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>90</y>
+         <width>261</width>
+         <height>341</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>-1</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox {
+    /* Bold dark green border with rounded corners */
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    
+    /* Pushes the interior content down so it doesn't overlap the title */
+    margin-top: 14px;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    /* Header text formatting */
+    font-weight: bold;
+    font-size: 13px;
+    color: #2d6a2d;
+    
+    /* Clean, soft off-white/cream background to pop against the dark workspace */
+    background-color: #f7faf6;
+}
+
+/* Position and style the text title anchor on the top line */
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 12px;
+    padding-left: 6px;
+    padding-right: 6px;
+    
+    /* Matches the parent container's solid background color to cut through the border line cleanly */
+    background-color: #f7faf6; 
+}</string>
+       </property>
+       <property name="title">
+        <string>Breakfast</string>
+       </property>
+       <widget class="QLabel" name="Titel_46">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>20</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Open Time</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_47">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>60</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Close Time</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_48">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>100</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Appetizer</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_49">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>140</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Main Plate</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_50">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>180</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Dessert</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_51">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>220</y>
+          <width>111</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Price</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titel_52">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>260</y>
+          <width>121</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>-1</pointsize>
+          <italic>true</italic>
+          <fontweight>ExtraBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 20px;
+</string>
+        </property>
+        <property name="text">
+         <string>Meal Served</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editDinnerOpenTime">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>40</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Normal</enum>
+        </property>
+        <property name="placeholderText">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editDinnerCloseTime">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>80</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Normal</enum>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editDinnerAppetizer">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>120</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Normal</enum>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editDinnerMainPlate">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>160</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Normal</enum>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editDinnerDessert">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>200</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Normal</enum>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editDinnerPrice">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>240</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Normal</enum>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editDinnerMealServed">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>280</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Normal</enum>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="btnReturn_4">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>0</y>
+         <width>81</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>-1</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #ededed; color: #004d00; padding: 5px;  border-image: none; border: none; border-radius: 15px; font-size:25px;</string>
+       </property>
+       <property name="text">
+        <string>return</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnSave">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>60</y>
+         <width>81</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>-1</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #004d00; color: white; padding: 5px;  border-image: none; border: none; border-radius: 15px; font-size:25px;</string>
+       </property>
+       <property name="text">
+        <string>Save</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

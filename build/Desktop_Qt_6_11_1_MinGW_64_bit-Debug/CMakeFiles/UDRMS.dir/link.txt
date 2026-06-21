@@ -1,0 +1,3 @@
+C:\QT\Tools\CMake_64\bin\cmake.exe -E rm -f CMakeFiles\UDRMS.dir/objects.a
+C:\QT\Tools\mingw1310_64\bin\ar.exe qc CMakeFiles\UDRMS.dir/objects.a @CMakeFiles\UDRMS.dir\objects1.rsp
+C:\QT\Tools\mingw1310_64\bin\g++.exe -g -mwindows -Wl,--whole-archive CMakeFiles\UDRMS.dir/objects.a -Wl,--no-whole-archive -o UDRMS.exe -Wl,--out-implib,libUDRMS.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\UDRMS.dir\linkLibs.rsp

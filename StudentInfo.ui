@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StudentInfo</class>
+ <widget class="QWidget" name="StudentInfo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#StudentInfo{
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #EAF7E6, stop:1 #A1DBA1);
+}</string>
+  </property>
+  <widget class="QLabel" name="Titel">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>40</y>
+     <width>788</width>
+     <height>82</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <fontweight>ExtraBold</fontweight>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 65px;
+</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Student Informations&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DormName">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>140</y>
+     <width>201</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 25px;
+</string>
+   </property>
+   <property name="text">
+    <string>The Full Name: </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DormName_2">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>420</y>
+     <width>231</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 25px;
+</string>
+   </property>
+   <property name="text">
+    <string>The Date Of Birth: </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DormName_3">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>300</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 25px;
+</string>
+   </property>
+   <property name="text">
+    <string>The Year Of Study: </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DormName_4">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>180</y>
+     <width>201</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 25px;
+</string>
+   </property>
+   <property name="text">
+    <string>The Student Id: </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DormName_5">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>380</y>
+     <width>201</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 25px;
+</string>
+   </property>
+   <property name="text">
+    <string>The Room: </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DormName_6">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>340</y>
+     <width>231</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 25px;
+</string>
+   </property>
+   <property name="text">
+    <string>The Academic Year: </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DormName_7">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>260</y>
+     <width>201</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 25px;
+</string>
+   </property>
+   <property name="text">
+    <string>The School: </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DormName_8">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>220</y>
+     <width>201</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 25px;
+</string>
+   </property>
+   <property name="text">
+    <string>The Age: </string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnReturnBack">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>520</y>
+     <width>201</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <fontweight>ExtraBold</fontweight>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white; color:#004d00; padding: 5px;  border-image: none; border: none; border-radius: 25px; font-size:30px;</string>
+   </property>
+   <property name="text">
+    <string>return Back</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnSave">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>520</y>
+     <width>201</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <fontweight>ExtraBold</fontweight>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #004d00; color: white; padding: 5px;  border-image: none; border: none; border-radius: 25px; font-size:30px;</string>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="DateOfBirth">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>420</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="AcademicYear">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>340</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="School">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>260</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="FullName">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>140</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Id">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>190</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="Age">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>220</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSpinBox {
+    background-color: rgba(255,255,255,210);
+    color: #1b5e20;
+    border: 2px solid #2d6a2d;
+    border-radius: 10px;
+    padding: 4px 24px 4px 8px;
+    font-size: 13px;
+    font-weight: bold;
+    selection-background-color: #2d6a2d;
+    selection-color: white;
+}
+
+QSpinBox:hover {
+    border: 2px solid #388e3c;
+    background-color: rgba(255,255,255,230);
+}
+
+QSpinBox:focus {
+    border: 2px solid #1b5e20;
+}
+QSpinBox::up-button {
+    subcontrol-origin: border;
+    subcontrol-position: top right;
+    width: 22px;
+
+    background-color: #2d6a2d;
+    border-top-right-radius: 8px;
+    border-left: 1px solid #1b5e20;
+    border-bottom: 1px solid #1b5e20;
+}
+
+QSpinBox::down-button {
+    subcontrol-origin: border;
+    subcontrol-position: bottom right;
+    width: 22px;
+
+    background-color: #2d6a2d;
+    border-bottom-right-radius: 8px;
+    border-left: 1px solid #1b5e20;
+}
+
+QSpinBox::up-button:hover,
+QSpinBox::down-button:hover {
+    background-color: #388e3c;
+}
+
+QSpinBox::up-button:pressed,
+QSpinBox::down-button:pressed {
+    background-color: #1b5e20;
+}</string>
+   </property>
+   <property name="maximum">
+    <number>100000</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="YearStudy">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>300</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSpinBox {
+    background-color: rgba(255,255,255,210);
+    color: #1b5e20;
+    border: 2px solid #2d6a2d;
+    border-radius: 10px;
+    padding: 4px 24px 4px 8px;
+    font-size: 13px;
+    font-weight: bold;
+    selection-background-color: #2d6a2d;
+    selection-color: white;
+}
+
+QSpinBox:hover {
+    border: 2px solid #388e3c;
+    background-color: rgba(255,255,255,230);
+}
+
+QSpinBox:focus {
+    border: 2px solid #1b5e20;
+}
+QSpinBox::up-button {
+    subcontrol-origin: border;
+    subcontrol-position: top right;
+    width: 22px;
+
+    background-color: #2d6a2d;
+    border-top-right-radius: 8px;
+    border-left: 1px solid #1b5e20;
+    border-bottom: 1px solid #1b5e20;
+}
+
+QSpinBox::down-button {
+    subcontrol-origin: border;
+    subcontrol-position: bottom right;
+    width: 22px;
+
+    background-color: #2d6a2d;
+    border-bottom-right-radius: 8px;
+    border-left: 1px solid #1b5e20;
+}
+
+QSpinBox::up-button:hover,
+QSpinBox::down-button:hover {
+    background-color: #388e3c;
+}
+
+QSpinBox::up-button:pressed,
+QSpinBox::down-button:pressed {
+    background-color: #1b5e20;
+}</string>
+   </property>
+   <property name="maximum">
+    <number>100000</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TheRoom">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>380</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DormName_9">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>460</y>
+     <width>271</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 25px;
+</string>
+   </property>
+   <property name="text">
+    <string>The Card Balance(DA): </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="showStudentBalance">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>460</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RoomForm</class>
+ <widget class="QWidget" name="RoomForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#RoomForm{
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #EAF7E6, stop:1 #A1DBA1);
+}</string>
+  </property>
+  <widget class="QLabel" name="Titel">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>0</y>
+     <width>771</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <fontweight>ExtraBold</fontweight>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 65px;
+</string>
+   </property>
+   <property name="text">
+    <string>Rooms Management</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="listRooms">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>190</y>
+     <width>801</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <fontweight>ExtraBold</fontweight>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QListWidget {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    background-color: rgba(255,255,255,180);
+    font-size: 14px;
+    padding: 5px;
+}
+
+QListWidget::item {
+    padding: 10px;
+    border-bottom: 1px solid #a0d0a0;
+    color: #1a3d1a;
+}
+
+QListWidget::item:selected {
+    background-color: #2d6a2d;
+    color: white;
+    border-radius: 5px;
+}
+
+QListWidget::item:hover {
+    background-color: #c8e6c8;
+    border-radius: 5px;
+}</string>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarPolicy::ScrollBarAsNeeded</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarPolicy::ScrollBarAsNeeded</enum>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="searchBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>160</y>
+     <width>801</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <fontweight>ExtraBold</fontweight>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #1a3d1a;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Search rooms...</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnReturnBack">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>500</y>
+     <width>271</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <fontweight>ExtraBold</fontweight>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white; color:#004d00; padding: 5px;  border-image: none; border: none; border-radius: 25px; font-size:30px;</string>
+   </property>
+   <property name="text">
+    <string>return Back</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnAddRoom">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>500</y>
+     <width>271</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <fontweight>ExtraBold</fontweight>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #004d00; color: white; padding: 5px;  border-image: none; border: none; border-radius: 25px; font-size:30px;</string>
+   </property>
+   <property name="text">
+    <string>add Room</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnRemoveFromDormitory">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>120</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <fontweight>ExtraBold</fontweight>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white; color: #004d00; padding: 5px;  border-image: none; border: none; border-radius: 10px; font-size:20px;</string>
+   </property>
+   <property name="text">
+    <string>Remove</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

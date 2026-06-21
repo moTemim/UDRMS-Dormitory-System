@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RoomInfo</class>
+ <widget class="QWidget" name="RoomInfo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#RoomInfo{
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #EAF7E6, stop:1 #A1DBA1);
+}</string>
+  </property>
+  <widget class="QLabel" name="Titel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>788</width>
+     <height>82</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <fontweight>ExtraBold</fontweight>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 65px;
+</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Room Informations&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DormName">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>140</y>
+     <width>201</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 25px;
+</string>
+   </property>
+   <property name="text">
+    <string>The Number: </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DormName_2">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>190</y>
+     <width>211</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 25px;
+</string>
+   </property>
+   <property name="text">
+    <string>The Floor: </string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="RoomFloor">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>190</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSpinBox {
+    background-color: rgba(255,255,255,210);
+    color: #1b5e20;
+    border: 2px solid #2d6a2d;
+    border-radius: 10px;
+    padding: 4px 24px 4px 8px;
+    font-size: 13px;
+    font-weight: bold;
+    selection-background-color: #2d6a2d;
+    selection-color: white;
+}
+
+QSpinBox:hover {
+    border: 2px solid #388e3c;
+    background-color: rgba(255,255,255,230);
+}
+
+QSpinBox:focus {
+    border: 2px solid #1b5e20;
+}
+QSpinBox::up-button {
+    subcontrol-origin: border;
+    subcontrol-position: top right;
+    width: 22px;
+
+    background-color: #2d6a2d;
+    border-top-right-radius: 8px;
+    border-left: 1px solid #1b5e20;
+    border-bottom: 1px solid #1b5e20;
+}
+
+QSpinBox::down-button {
+    subcontrol-origin: border;
+    subcontrol-position: bottom right;
+    width: 22px;
+
+    background-color: #2d6a2d;
+    border-bottom-right-radius: 8px;
+    border-left: 1px solid #1b5e20;
+}
+
+QSpinBox::up-button:hover,
+QSpinBox::down-button:hover {
+    background-color: #388e3c;
+}
+
+QSpinBox::up-button:pressed,
+QSpinBox::down-button:pressed {
+    background-color: #1b5e20;
+}</string>
+   </property>
+   <property name="maximum">
+    <number>100000</number>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="RoomNumber">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>140</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DormName_3">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>240</y>
+     <width>211</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 25px;
+</string>
+   </property>
+   <property name="text">
+    <string>The Corridor:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="RoomCorridor">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>240</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(255,255,255,180);
+	color: #2d6a2d;
+}</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DormName_4">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>290</y>
+     <width>201</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 25px;
+</string>
+   </property>
+   <property name="text">
+    <string>The Capacity: </string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="RoomCapacity">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>300</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSpinBox {
+    background-color: rgba(255,255,255,210);
+    color: #1b5e20;
+    border: 2px solid #2d6a2d;
+    border-radius: 10px;
+    padding: 4px 24px 4px 8px;
+    font-size: 13px;
+    font-weight: bold;
+    selection-background-color: #2d6a2d;
+    selection-color: white;
+}
+
+QSpinBox:hover {
+    border: 2px solid #388e3c;
+    background-color: rgba(255,255,255,230);
+}
+
+QSpinBox:focus {
+    border: 2px solid #1b5e20;
+}
+QSpinBox::up-button {
+    subcontrol-origin: border;
+    subcontrol-position: top right;
+    width: 22px;
+
+    background-color: #2d6a2d;
+    border-top-right-radius: 8px;
+    border-left: 1px solid #1b5e20;
+    border-bottom: 1px solid #1b5e20;
+}
+
+QSpinBox::down-button {
+    subcontrol-origin: border;
+    subcontrol-position: bottom right;
+    width: 22px;
+
+    background-color: #2d6a2d;
+    border-bottom-right-radius: 8px;
+    border-left: 1px solid #1b5e20;
+}
+
+QSpinBox::up-button:hover,
+QSpinBox::down-button:hover {
+    background-color: #388e3c;
+}
+
+QSpinBox::up-button:pressed,
+QSpinBox::down-button:pressed {
+    background-color: #1b5e20;
+}</string>
+   </property>
+   <property name="maximum">
+    <number>100000</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DormName_5">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>330</y>
+     <width>281</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 25px;
+</string>
+   </property>
+   <property name="text">
+    <string>The Current Occupancy:</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="RoomCurrentOccupancy">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>330</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSpinBox {
+    background-color: rgba(255,255,255,210);
+    color: #1b5e20;
+    border: 2px solid #2d6a2d;
+    border-radius: 10px;
+    padding: 4px 24px 4px 8px;
+    font-size: 13px;
+    font-weight: bold;
+    selection-background-color: #2d6a2d;
+    selection-color: white;
+}
+
+QSpinBox:hover {
+    border: 2px solid #388e3c;
+    background-color: rgba(255,255,255,230);
+}
+
+QSpinBox:focus {
+    border: 2px solid #1b5e20;
+}
+QSpinBox::up-button {
+    subcontrol-origin: border;
+    subcontrol-position: top right;
+    width: 22px;
+
+    background-color: #2d6a2d;
+    border-top-right-radius: 8px;
+    border-left: 1px solid #1b5e20;
+    border-bottom: 1px solid #1b5e20;
+}
+
+QSpinBox::down-button {
+    subcontrol-origin: border;
+    subcontrol-position: bottom right;
+    width: 22px;
+
+    background-color: #2d6a2d;
+    border-bottom-right-radius: 8px;
+    border-left: 1px solid #1b5e20;
+}
+
+QSpinBox::up-button:hover,
+QSpinBox::down-button:hover {
+    background-color: #388e3c;
+}
+
+QSpinBox::up-button:pressed,
+QSpinBox::down-button:pressed {
+    background-color: #1b5e20;
+}</string>
+   </property>
+   <property name="maximum">
+    <number>100000</number>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="listStudents">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>410</y>
+     <width>801</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <fontweight>ExtraBold</fontweight>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QListWidget {
+    border: 2px solid #2d6a2d;
+    border-radius: 8px;
+    background-color: rgba(255,255,255,180);
+    font-size: 14px;
+    padding: 5px;
+}
+
+QListWidget::item {
+    padding: 10px;
+    border-bottom: 1px solid #a0d0a0;
+    color: #1a3d1a;
+}
+
+QListWidget::item:selected {
+    background-color: #2d6a2d;
+    color: white;
+    border-radius: 5px;
+}
+
+QListWidget::item:hover {
+    background-color: #c8e6c8;
+    border-radius: 5px;
+}</string>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarPolicy::ScrollBarAsNeeded</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarPolicy::ScrollBarAsNeeded</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DormName_6">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>370</y>
+     <width>281</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent; color: #004d00; padding: 5px; border-image: none; border: none; font-size: 25px;
+</string>
+   </property>
+   <property name="text">
+    <string>The List Of Students :</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnReturnBack">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>530</y>
+     <width>201</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <fontweight>ExtraBold</fontweight>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white; color:#004d00; padding: 5px;  border-image: none; border: none; border-radius: 25px; font-size:30px;</string>
+   </property>
+   <property name="text">
+    <string>return Back</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnSaveRoomInfo">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>530</y>
+     <width>201</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <fontweight>ExtraBold</fontweight>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #004d00; color: white; padding: 5px;  border-image: none; border: none; border-radius: 25px; font-size:30px;</string>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="avalaibleStudents">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>373</y>
+     <width>251</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Style the main closed dropdown box */
+QComboBox {
+    border: 1px solid #2d6a2d;
+    border-radius: 4px;
+    padding: 4px 10px;
+    min-width: 6em;
+    color: #1a3d1a;
+    background-color: rgba(255, 255, 255, 210);
+    font-size: 20px;
+}
+
+/* Style the arrow button section box on the right side */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px; /* Widened slightly for click breathing room */
+    border-left-width: 1px;
+    border-left-color: #a0d0a0;
+    border-left-style: solid; 
+    border-top-right-radius: 4px; 
+    border-bottom-right-radius: 4px;
+}
+
+/* FIX: This explicitly draws a sharp down-arrow triangle inside the dropdown area */
+QComboBox::down-arrow {
+    image: none; /* Clear native windows images */
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #2d6a2d; /* Draws a sharp green triangle down arrow */
+    width: 0;
+    height: 0;
+    position: relative;
+    right: 2px; /* Centers it nicely inside the 25px area */
+}
+
+/* Style the popup list box that drops down when clicked */
+QComboBox QAbstractItemView {
+    border: 1px solid #2d6a2d;
+    background-color: #ffffff;
+    selection-background-color: #2d6a2d;
+    selection-color: white;
+    color: #1a3d1a;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>available students</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnAddStudentToRoom">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>370</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <fontweight>ExtraBold</fontweight>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #004d00; color: white; padding: 5px;  border-image: none; border: none; border-radius: 10px; font-size:20px;</string>
+   </property>
+   <property name="text">
+    <string>add</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnRemoveFromRoom">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>510</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <fontweight>ExtraBold</fontweight>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white; color: #004d00; padding: 5px;  border-image: none; border: none; border-radius: 10px; font-size:20px;</string>
+   </property>
+   <property name="text">
+    <string>Remove</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

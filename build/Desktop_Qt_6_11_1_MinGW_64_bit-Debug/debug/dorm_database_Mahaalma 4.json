@@ -1,0 +1,225 @@
+{
+    "capacity": 500,
+    "gender": "female",
+    "name": "Mahaalma 4",
+    "numRooms": 500,
+    "password": "111111",
+    "restaurantMenu": [
+        {
+            "breakfast": {
+                "appetizer": "",
+                "closeTime": "",
+                "dessert": "",
+                "mainPlate": "",
+                "mealsServed": 0,
+                "openTime": "",
+                "price": 0
+            },
+            "dayIndex": 0,
+            "dinner": {
+                "appetizer": "",
+                "closeTime": "",
+                "dessert": "",
+                "mainPlate": "",
+                "mealsServed": 0,
+                "openTime": "",
+                "price": 0
+            },
+            "lunch": {
+                "appetizer": "",
+                "closeTime": "",
+                "dessert": "",
+                "mainPlate": "",
+                "mealsServed": 0,
+                "openTime": "",
+                "price": 0
+            }
+        },
+        {
+            "breakfast": {
+                "appetizer": "",
+                "closeTime": "",
+                "dessert": "",
+                "mainPlate": "",
+                "mealsServed": 0,
+                "openTime": "",
+                "price": 0
+            },
+            "dayIndex": 1,
+            "dinner": {
+                "appetizer": "",
+                "closeTime": "",
+                "dessert": "",
+                "mainPlate": "",
+                "mealsServed": 0,
+                "openTime": "",
+                "price": 0
+            },
+            "lunch": {
+                "appetizer": "",
+                "closeTime": "",
+                "dessert": "",
+                "mainPlate": "",
+                "mealsServed": 0,
+                "openTime": "",
+                "price": 0
+            }
+        },
+        {
+            "breakfast": {
+                "appetizer": "",
+                "closeTime": "",
+                "dessert": "",
+                "mainPlate": "",
+                "mealsServed": 0,
+                "openTime": "",
+                "price": 0
+            },
+            "dayIndex": 2,
+            "dinner": {
+                "appetizer": "",
+                "closeTime": "",
+                "dessert": "",
+                "mainPlate": "",
+                "mealsServed": 0,
+                "openTime": "",
+                "price": 0
+            },
+            "lunch": {
+                "appetizer": "",
+                "closeTime": "",
+                "dessert": "",
+                "mainPlate": "",
+                "mealsServed": 0,
+                "openTime": "",
+                "price": 0
+            }
+        },
+        {
+            "breakfast": {
+                "appetizer": "",
+                "closeTime": "",
+                "dessert": "",
+                "mainPlate": "",
+                "mealsServed": 0,
+                "openTime": "",
+                "price": 0
+            },
+            "dayIndex": 3,
+            "dinner": {
+                "appetizer": "",
+                "closeTime": "",
+                "dessert": "",
+                "mainPlate": "",
+                "mealsServed": 0,
+                "openTime": "",
+                "price": 0
+            },
+            "lunch": {
+                "appetizer": "",
+                "closeTime": "",
+                "dessert": "",
+                "mainPlate": "",
+                "mealsServed": 0,
+                "openTime": "",
+                "price": 0
+            }
+        },
+        {
+            "breakfast": {
+                "appetizer": "",
+                "closeTime": "",
+                "dessert": "",
+                "mainPlate": "",
+                "mealsServed": 0,
+                "openTime": "",
+                "price": 0
+            },
+            "dayIndex": 4,
+            "dinner": {
+                "appetizer": "",
+                "closeTime": "",
+                "dessert": "",
+                "mainPlate": "",
+                "mealsServed": 0,
+                "openTime": "",
+                "price": 0
+            },
+            "lunch": {
+                "appetizer": "",
+                "closeTime": "",
+                "dessert": "",
+                "mainPlate": "",
+                "mealsServed": 0,
+                "openTime": "",
+                "price": 0
+            }
+        },
+        {
+            "breakfast": {
+                "appetizer": "",
+                "closeTime": "",
+                "dessert": "",
+                "mainPlate": "",
+                "mealsServed": 0,
+                "openTime": "",
+                "price": 0
+            },
+            "dayIndex": 5,
+            "dinner": {
+                "appetizer": "",
+                "closeTime": "",
+                "dessert": "",
+                "mainPlate": "",
+                "mealsServed": 0,
+                "openTime": "",
+                "price": 0
+            },
+            "lunch": {
+                "appetizer": "",
+                "closeTime": "",
+                "dessert": "",
+                "mainPlate": "",
+                "mealsServed": 0,
+                "openTime": "",
+                "price": 0
+            }
+        },
+        {
+            "breakfast": {
+                "appetizer": "",
+                "closeTime": "",
+                "dessert": "",
+                "mainPlate": "",
+                "mealsServed": 0,
+                "openTime": "",
+                "price": 0
+            },
+            "dayIndex": 6,
+            "dinner": {
+                "appetizer": "",
+                "closeTime": "",
+                "dessert": "",
+                "mainPlate": "",
+                "mealsServed": 0,
+                "openTime": "",
+                "price": 0
+            },
+            "lunch": {
+                "appetizer": "",
+                "closeTime": "",
+                "dessert": "",
+                "mainPlate": "",
+                "mealsServed": 0,
+                "openTime": "",
+                "price": 0
+            }
+        }
+    ],
+    "rooms": [
+    ],
+    "roomsFree": 0,
+    "roomsOccu": 0,
+    "students": [
+    ]
+}
